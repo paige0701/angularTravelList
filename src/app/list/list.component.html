@@ -2,6 +2,17 @@
 <hr>
 <div>
   <ul>
-    <li *ngFor="let cont of continent">{{cont.name}}</li>
+    <li *ngFor="let cont of continent"><a href="javascript:" (click)="openCountries(cont.id)">{{cont.name}}</a></li>
   </ul>
+</div>
+
+<div *ngIf="countries">
+  <hr>
+  <div *ngFor="let country of countries">
+    <div *ngIf="country.continent_id == continent_id">
+      {{country.name}}
+    </div>
+  </div>
+
+
 </div>
