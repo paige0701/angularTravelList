@@ -14,6 +14,16 @@
     </div>
   </div>
 
+  <div *ngIf="selectedCountry">
+    <div *ngFor="let country of selectedCountry">
+      <div *ngIf="country.id == countryid">
+        <p>Country name :  {{country.name}}</p>
+        <p>Language : {{country.language}}</p>
+      </div>
+    </div>
+
+  </div>
+
 
 </div>
 

@@ -12,6 +12,7 @@ import {BrowserModule} from '@angular/platform-browser';
     HttpModule,
     RouterModule.forChild([{
       path:'', component:ListComponent
+
     }])
   ],
   declarations: [ListComponent],

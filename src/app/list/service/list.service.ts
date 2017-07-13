@@ -13,15 +13,15 @@ export class ListService {
   constructor(private _http: Http){}
 
   getcountries(): Observable<Countries[]> {
-    console.log("service");
     return this._http.get('assets/countries.json')
-      .map((response: Response) => <Countries[]> response.json())
-      .do(data => console.log(JSON.stringify(data)));
+      .map((response: Response) => <Countries[]> response.json());
   }
 
   getcontinents(): Observable<Continent[]> {
-    return this._http.get('assets/continents.json').map((response: Response) => <Continent[]> response.json()).do(data => console.log(JSON.stringify(data)));
+    return this._http.get('assets/continents.json').map((response: Response) => <Continent[]> response.json());
 
   }
+
+
 
 }
