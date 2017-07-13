@@ -2,7 +2,7 @@
 <hr>
 <div>
   <ul>
-    <li *ngFor="let cont of continent"><a href="javascript:" (click)="openCountries(cont.id)">{{cont.name}}</a></li>
+    <li *ngFor="let cont of continents"><a href="javascript:" (click)="openCountries(cont.id)" >{{cont.name}}</a></li>
   </ul>
 </div>
 
@@ -10,9 +10,10 @@
   <hr>
   <div *ngFor="let country of countries">
     <div *ngIf="country.continent_id == continent_id">
-      {{country.name}}
+      <a href="javascript:" (click)="countryDetail(country.id)">{{country.name}}</a>
     </div>
   </div>
 
 
 </div>
+
