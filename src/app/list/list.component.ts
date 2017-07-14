@@ -34,7 +34,7 @@ export class ListComponent {
 
   public openCountries(continent_id){
     this.continent_id = continent_id
-
+    this.selectedCountry = [];
   }
 
   public countryDetail(id){

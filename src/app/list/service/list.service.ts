@@ -22,6 +22,10 @@ export class ListService {
 
   }
 
+  getSelectedCountries(id) : Observable<Countries[]> {
+    return this._http.get('assets/countries/json?continent_id='+id).map((response: Response) => <Continent[]> response.json());
+  }
+
 
 
 }

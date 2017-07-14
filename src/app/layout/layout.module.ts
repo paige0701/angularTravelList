@@ -11,7 +11,9 @@ import { ListComponent } from '../list/list.component';
     RouterModule.forChild([ {
       path:'', component: LayoutComponent,
       children : [ { path:'', loadChildren:'app/home/home.module#HomeModule'},
-        {path: 'list', loadChildren:'app/list/list.module#ListModule'}]
+        {path: 'continents', loadChildren:'app/list/list.module#ListModule'}
+
+      ]
 
     }])
   ],
